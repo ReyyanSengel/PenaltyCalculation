@@ -1,0 +1,48 @@
+﻿@model PreRegistrationViewModel
+
+<div class="row">
+
+    <div class=col-md-6>
+
+        <form asp-action="Calculate" method="post" asp-controller="Calculation">
+
+            <div class="form-group">
+                <label asp-for="CountryId">Countries</label>
+                <select asp-for="CountryId" asp-items="ViewBag.Countries" class="form-control"></select>
+            </div>
+            <div class="form-group">
+                <label asp-for="CheckedOut"></label>
+                <input asp-for="CheckedOut" class="form-control" />
+                <span asp-validation-for="CheckedOut" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Returned"></label>
+                <input asp-for="Returned" class="form-control" />
+                <span asp-validation-for="Returned" class="text-danger"></span>
+            </div>
+
+            <div class="form-group">
+                <input type="submit" value="Save" class="btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
